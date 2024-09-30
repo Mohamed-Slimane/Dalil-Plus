@@ -19,3 +19,5 @@ Dali+ is a powerful and comprehensive tool for creating and editing project docu
 2. Create the sections you need to organize your documentation (e.g., "Setup" or "Features").
 3. Use the integrated editor to write text and insert images within each section.
 4. When finished, export the document as an HTML file to be used as a reference or official documentation in your project.
+
+![image](https://github.com/user-attachments/assets/996ec314-1972-43f2-b553-0ea08255bf68)
