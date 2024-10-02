@@ -172,12 +172,16 @@ namespace Dalil
                     MessageBox.Show("تم البناء بنجاح!");
                     return ;
                 }else if(intentJson.type == "deleteProject"){ //Delete the project
-                    string projectFilePath = Path.Combine(projectsFolder, $"{projectId}.json"); //Get the location of the project file
-                    File.Delete(projectFilePath); //Delete the project file
+                    string deleteId = intentJson.id;
+                    try
+                    {
+                        string projectFilePath = Path.Combine(projectsFolder, $"{deleteId}.json"); //Get the location of the project file
+                        File.Delete(projectFilePath); //Delete the project 
+                    }
+                    catch (Exception ex){}
                     string projectsList = File.ReadAllText(projectsListFile); //Read the projects list
                     JObject projectsListJson = JsonConvert.DeserializeObject<JObject>(projectsList); // Convert to JObject
-
-                    projectsListJson.Remove(projectId); //Remove the project from the projects list
+                    projectsListJson.Remove(deleteId); //Remove the project from the projects list
 
                     File.WriteAllText(projectsListFile, JsonConvert.SerializeObject(projectsListJson, Formatting.Indented)); //Write the updated projects list to the projects list file
 
