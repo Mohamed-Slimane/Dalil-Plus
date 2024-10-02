@@ -170,6 +170,7 @@ namespace Dalil
                     string page_content = "let content_data = " + intentJson.data + ";";
                     File.WriteAllText(indexPath, File.ReadAllText(indexPath).Replace("/*datdatdat*/", page_content));
                     MessageBox.Show("تم البناء بنجاح!");
+                    Process.Start(new ProcessStartInfo(buildFolderPath) { UseShellExecute = true });
                     return ;
                 }else if(intentJson.type == "deleteProject"){ //Delete the project
                     string deleteId = intentJson.id;
