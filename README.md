@@ -21,3 +21,5 @@ Dali+ is a powerful and comprehensive tool for creating and editing project docu
 4. When finished, export the document as an HTML file to be used as a reference or official documentation in your project.
 
 ![image](https://github.com/user-attachments/assets/996ec314-1972-43f2-b553-0ea08255bf68)
+
+![image](https://github.com/user-attachments/assets/29dc5f4f-fb92-4f80-93ab-31bcb4030344)
